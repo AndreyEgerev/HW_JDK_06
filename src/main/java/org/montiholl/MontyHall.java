@@ -5,7 +5,9 @@ import java.util.Random;
 public class MontyHall {
     public static final Random gen = new Random();
 
-    /** chooses a random door other than door1 or door2 */
+    /** Выбор случайной двери
+     *
+     */
     public static int chooseAnotherDoor(int door1, int door2) {
         int result;
         do

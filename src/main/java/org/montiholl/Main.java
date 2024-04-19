@@ -1,7 +1,6 @@
 package org.montiholl;
 
 import java.util.Random;
-
 import static org.montiholl.MontyHall.*;
 
 public class Main {
@@ -17,13 +16,13 @@ public class Main {
         for (int i = 0; i < ROUNDS; i++) {
             int prize = gen.nextInt(3);
             int userChoice1 = gen.nextInt(3);
-            // host opens door other than user's choice without prize
+            // открывает случайную дверь за которой нет приза.
             int hostChoice = chooseAnotherDoor(prize, userChoice1);
-            // user switches door
+            // игрок сменил дверь
             int userChoice2 = chooseAnotherDoor(userChoice1, hostChoice);
             if (userChoice2 == prize)
                 winsSwitch++;
-            // user not switches door
+            // Игрок оставил выбранную дверь
             if (userChoice1 == prize)
                 winsNotSwitch++;
         }
